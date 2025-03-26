@@ -38,3 +38,4 @@ Monitoring Dashboard:
 A unified dashboard (using tools like Streamlit, Power BI, or a web interface) that provides real-time updates from the live pipeline alongside aggregated batch summaries. The dashboard should offer high-level insights into data health and market trends.
 
 This project is designed to be completed in 2–4 hours and allows you to showcase your expertise in building scalable, maintainable data pipelines with both real-time and batch processing capabilities—all while keeping the entire solution in a Git-controlled codebase. The focus of this project is more about the way you get to the solution, than the final solution, we measure knowledge, not codekeeping the entire solution in a Git-controlled codebase. The focus of this project is more about the way you get to the solution, than the final solution, we measure knowledge, not code.
+Please generate a REPO we can run to see the results you get. 
