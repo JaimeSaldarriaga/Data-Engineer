@@ -1,0 +1,15 @@
+scripts:
+
+  set_google_credentials:
+    - export GOOGLE_APPLICATION_CREDENTIALS="credentials.json"
+
+  ingest_streaming:
+    - python realtime_ingestion.py
+
+  ingest_batch:
+    - python batch_ingestion.py
+
+  extract:
+    - rav run set_google_credentials
+    - rav run ingest_batch
+    - rav run ingest_streaming
