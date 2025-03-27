@@ -53,12 +53,12 @@ def ingest_delayed_minute():
 
         if csv_file:
             upload_to_bigquery(csv_file, f"test-data-engenieer.bronze.{symbol}_{timeframe}_realtime")
-            return {"status": 200, "message": "✅ CSV successfully uploaded to BigQuery.", "from": from_time, "to": to_time}
+            return {"status": 200, "message": "✅ CSV successfully uploaded to BigQuery.", "from": from_time, "to": to_time, "process": "real_time"}
         else:
-            return {"status": 204, "message": "⚠️ CSV not found after download.", "from": from_time, "to": to_time}
+            return {"status": 204, "message": "⚠️ CSV not found after download.", "from": from_time, "to": to_time, "process": "real_time"}
 
     except Exception as e:
-        return {"status": 500, "message": f"❌ Error during ingestion: {e}", "from": from_time, "to": to_time}
+        return {"status": 500, "message": f"❌ Error during ingestion: {e}", "from": from_time, "to": to_time, "process": "real_time"}
 
 if __name__ == "__main__":
     print("⏱️  Real-time ingestion started with a 5-minute delay...\n")
